@@ -6,6 +6,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ISB2 - Tim Anak-Anak Gabut</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .group-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            width: 260px;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            position: relative;
+            height: 130px;
+            background-image: url('https://www.calicojackcharters.com/wp-content/uploads/2019/09/sunset-in-raja-ampat.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+        }
+
+        .location-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 11px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+            z-index: 1;
+        }
+
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: -35px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 10px 15px 20px 15px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .role {
+            font-size: 12px;
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 12px;
+            color: #7f8c8d;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -18,7 +128,21 @@
   <main class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto">
 
     <!-- ===== CARD 1 - Liyenvan Marsada Siregar ===== -->
-
+  <div class="profile-card">
+    <div class="card-header">
+      <span class="location-tag">Raja Ampat</span>
+    </div>
+    <div class="avatar-container">
+      <img src="https://cdn.discordapp.com/attachments/1058617166125072425/1548980340738232330/IMG_20260914_155105.jpg?ex=6aa907db&is=6aa7b65b&hm=79ed8a3de288125466d18a9ab2ec0e16a6b0d1fc50f6020e2f9a2254d7b02fab&" alt="Foto Profil" class="avatar">
+    </div>
+    <div class="card-body">
+      <h3 class="name">Liyenvan Marsada Siregar</h3>
+        <div class="role">Anggota Kelompok</div>
+        <p class="bio">
+            Fokus belajar dan mengembangkan skill baru dalam mengembangkan website, dan berusaha selalu sampai menjadi sukses!
+        </p>
+    </div>
+  </div>
 
     <!-- ===== CARD 2 - Tiara Zalfa Dzakiah ===== -->
 
